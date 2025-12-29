@@ -14,7 +14,7 @@ function favoriteSongs(playlist) {
   //  console.log(...playlist[i])
   // }
 
-  const sorted = playlist.sort((a, b) => b.plays - a.plays);
+  const sorted = [...playlist].sort((a, b) => b.plays - a.plays);
   console.log(sorted);
 
   const sliced = sorted.slice(0, 2);
