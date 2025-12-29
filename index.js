@@ -26,3 +26,12 @@ function favoriteSongs(playlist) {
 
   // return playlist;
 }
+
+// one liner
+// function favouriteSongs(playlist) {
+// return [...playlist]
+// .sort((a,b) => b.plays - a.plays)
+// .slice(0,2)
+// .map(song => song.title)
+// };
+//
