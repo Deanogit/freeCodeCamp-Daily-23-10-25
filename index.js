@@ -10,8 +10,19 @@ function favoriteSongs(playlist) {
   // array of objects
   // loop through objects, getting the highest plays value
 
-  for (i = 0; i <= playlist.length; i++) {
-    console.log(...playlist[i]);
-  }
+  // for (i = 0; i <= playlist.length; i++) {
+  //  console.log(...playlist[i])
+  // }
+
+  const sorted = playlist.sort((a, b) => b.plays - a.plays);
+  console.log(sorted);
+
+  const sliced = sorted.slice(0, 2);
+
+  const results = sliced.map((x) => x.title);
+
+  console.log(results);
+  return results;
+
   // return playlist;
 }
